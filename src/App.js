@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import DenseAppBar from './Components/Nav_Bar/DenseAppBar'
+import VerifyPage from './Components/Verify_Page/VerifyPage'
+import StatsPage from './Components/Stats_Page/StatsPage'
+
 
 function App() {
+  const [verify, setVerify] = useState(true);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <DenseAppBar setCurrPage={setVerify}/>
+      {verify?
+        <VerifyPage/>:
+        <StatsPage/>
+      }
     </div>
   );
 }
