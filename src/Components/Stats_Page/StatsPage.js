@@ -2,6 +2,8 @@ import TextField from '@material-ui/core/TextField';
 import { useState } from 'react';
 import "../../css/statsPage.css";
 import axios from "axios";
+import DataTable from './DataTable'
+import Button from '@material-ui/core/Button';
 
 function StatsPage() {
     const [start, setStart] = useState(1);
@@ -9,7 +11,11 @@ function StatsPage() {
     const [apiResponse, setApiResponse] = useState({});
     const onFormSubmit = (event) => {
         event.preventDefault();
-        callApi(start, limit);
+        if (start < 0 || limit < 0) {
+            window.alert("values of start and limit must be greater than 0")
+        } else {
+            callApi(start, limit);
+        }
     }
     const callApi = (start, limit) => {
         console.log(start, limit);
@@ -33,47 +39,45 @@ function StatsPage() {
     }
     return (
         <div>
-            <form onSubmit={onFormSubmit} className="inputForm">
-                <TextField
-                    id="outlined-number"
-                    label="Start from"
-                    type="number"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    name="start"
-                    variant="outlined"
-                    className="inputField"
-                    value={start}
-                    onChange={handleStartChange}
-                />
-                <TextField
-                    id="outlined-number"
-                    label="Limit"
-                    type="number"
-                    InputLabelProps={{
-                        shrink: true,
-                    }}
-                    name="limit"
-                    variant="outlined"
-                    className="inputField"
-                    value={limit}
-                    onChange={handleLimitChange}
-                />
-                <input type="submit" value="get Stats" />
-            </form>
-            {apiResponse.success ?
-                <table><tbody>{apiResponse.payload.map((load, key) => {
-                    return (<div>
-                        <tr key={key}>
-                            <td>{load.bin}</td>
-                            <td>{load.call_count}</td>
-                        </tr>
-                    </div>)
-
-                })}</tbody> </table> :
-                null
-            }
+            <form onSubmit={onFormSubmit} >
+                <div className="inputForm">
+                    <div className="inputField">
+                        <TextField
+                            id="outlined-number"
+                            label="Start from"
+                            type="number"
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                            name="start"
+                            variant="outlined"
+                            className="inputField"
+                            value={start}
+                            onChange={handleStartChange}
+                        />
+                    </div>
+                    <div className="inputField">
+                        <TextField
+                            id="outlined-number"
+                            label="Limit"
+                            type="number"
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
+                            name="limit"
+                            variant="outlined"
+                            className="inputField"
+                            value={limit}
+                            onChange={handleLimitChange}
+                        />
+                    </div>
+                    <div className="inputField">
+                        <Button variant="contained" type="submit" color="primary" >
+                            get Stats
+        </Button>
+                    </div>
+                </div>
+            </form><DataTable data={apiResponse.payload} />
         </div>
     )
 }

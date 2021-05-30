@@ -14,7 +14,7 @@ function VerifyPage() {
                 setResponse(data)
                 return console.log(data);
             }).catch(() => {
-                setResponse(...response,)
+                window.alert("Invalid BIN/INN")
             });
 
     }
