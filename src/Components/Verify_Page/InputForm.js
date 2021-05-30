@@ -1,36 +1,28 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import TextField from '@material-ui/core/TextField';
 
-class InputForm extends Component {
-    state = {  }
-    onFormSubmit =(event)=>{
-        
+function InputForm(props) {
+    const [input, setInput] = useState("");
+    const handleChange = (event) => {
+        let input = event.target.value;
+        setInput(input);
+    }
+    const onFormSubmit = (event) => {
         event.preventDefault();
-
-        if(this.state.name !== "" && Object.keys(this.state).length ){
-            console.log("onFormSubmit called",this.state);
-
-        this.props.handleSubmit(this.state);   
-    }                                                                                                                                                                                           
+        props.callAPI(input);
     }
-    handleChange= (event)=>{
-        
-        let input= event.target.value;
-        
-        let fruit= input.split("-"); 
-        console.log('handlechange', input)
-
-        this.setState({name :fruit[0], quantity:parseInt(fruit[1])});
-    }
-    render() { 
-        return ( 
-        <form onSubmit={this.onFormSubmit}>
-
-            <input onChange ={this.handleChange} type="text" name="name" id="name"/>
-            <input type="submit" value="Add" />
-      
+    return (
+        <form onSubmit={onFormSubmit} noValidate autoComplete="off">
+            <TextField
+                id="standard-search"
+                label="Enter BIN number"
+                type="search"
+                margin="dense"
+                value={input}
+                onChange={handleChange}
+            />
         </form>
-         );
-    }
+    );
 }
- 
+
 export default InputForm;
