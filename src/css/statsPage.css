@@ -1,0 +1,8 @@
+.inputForm {
+  display: flex;
+  /* justify-content: space-between; */
+  /* margin: 30px; */
+}
+.inputField {
+  margin: 20px;
+}

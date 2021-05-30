@@ -19,7 +19,7 @@ function StatsPage() {
     }
     const callApi = (start, limit) => {
         console.log(start, limit);
-        axios.get(`http://1cb03ce6e0c7.ngrok.io/card-scheme/stats?start=${start}&limit=${limit}`)
+        axios.get(`http://34.70.30.55:8080/card-scheme/stats?start=${start}&limit=${limit}`)
             .then((response) => {
                 let data = response.data;
                 setApiResponse(data)

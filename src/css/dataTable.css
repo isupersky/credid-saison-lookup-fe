@@ -1,0 +1,31 @@
+.dataTable {
+  margin: 40px;
+}
+
+.dataTable__tablehead {
+  background: #f7f7f7;
+}
+.dataTable .table-bordered-cus > tbody > tr > td,
+.dataTable .table-bordered-cus > tbody > tr > th,
+.dataTable .table-bordered-cus > tfoot > tr > td,
+.dataTable .table-bordered-cus > tfoot > tr > th,
+.dataTable .table-bordered-cus > thead > tr > td,
+.dataTable .table-bordered-cus > thead > tr > th {
+  color: #555555;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.table-bordered-cus {
+  border: 1px solid #ddd;
+}
+
+.table-cus {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}

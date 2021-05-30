@@ -1,0 +1,53 @@
+.cardDetail {
+  display: flex;
+  width: 90%;
+}
+.cardDetail__first {
+  width: 70%;
+}
+.cardDetail__second {
+  width: 30%;
+}
+.cardDetail__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  list-style: none;
+}
+.cardDetail__row--item {
+  width: 50%;
+}
+.cardDetail__row--heading {
+  font-size: 15px;
+  color: gray;
+}
+.cardDetail__row--subhead {
+  font-size: 12px;
+  color: gray;
+}
+.cardDetail__row--value {
+  color: black;
+  font-size: 15px;
+}
+.cardDetail__row--link {
+  color: dodgerblue;
+  font-size: 13px;
+}
+.cardDetail__row--mobile {
+  font-size: 13px;
+}
+.cardDetail__row--segment {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cardDetail__row--subseg {
+  margin-right: 40px;
+}
+.cardDetail-second {
+  width: 30%;
+}
+.cardDetail__second__internal {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #f3f4f8;
+}
