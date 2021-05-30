@@ -11,7 +11,7 @@ function StatsPage() {
     const [apiResponse, setApiResponse] = useState({});
     const onFormSubmit = (event) => {
         event.preventDefault();
-        if (start < 0 || limit < 0) {
+        if (start <=0 || limit <=0) {
             window.alert("values of start and limit must be greater than 0")
         } else {
             callApi(start, limit);
