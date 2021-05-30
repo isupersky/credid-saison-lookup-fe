@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/credid-saison-lookup-fe/static/css/main.ffb63c21.chunk.css",
+    "main.js": "/credid-saison-lookup-fe/static/js/main.52f6157e.chunk.js",
+    "main.js.map": "/credid-saison-lookup-fe/static/js/main.52f6157e.chunk.js.map",
+    "runtime-main.js": "/credid-saison-lookup-fe/static/js/runtime-main.ad14c73f.js",
+    "runtime-main.js.map": "/credid-saison-lookup-fe/static/js/runtime-main.ad14c73f.js.map",
+    "static/js/2.fa72e0b0.chunk.js": "/credid-saison-lookup-fe/static/js/2.fa72e0b0.chunk.js",
+    "static/js/2.fa72e0b0.chunk.js.map": "/credid-saison-lookup-fe/static/js/2.fa72e0b0.chunk.js.map",
+    "static/js/3.3ecd6f12.chunk.js": "/credid-saison-lookup-fe/static/js/3.3ecd6f12.chunk.js",
+    "static/js/3.3ecd6f12.chunk.js.map": "/credid-saison-lookup-fe/static/js/3.3ecd6f12.chunk.js.map",
+    "index.html": "/credid-saison-lookup-fe/index.html",
+    "static/css/main.ffb63c21.chunk.css.map": "/credid-saison-lookup-fe/static/css/main.ffb63c21.chunk.css.map",
+    "static/js/2.fa72e0b0.chunk.js.LICENSE.txt": "/credid-saison-lookup-fe/static/js/2.fa72e0b0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad14c73f.js",
+    "static/js/2.fa72e0b0.chunk.js",
+    "static/css/main.ffb63c21.chunk.css",
+    "static/js/main.52f6157e.chunk.js"
+  ]
+}
