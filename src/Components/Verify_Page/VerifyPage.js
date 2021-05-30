@@ -8,7 +8,7 @@ function VerifyPage() {
     const [response, setResponse] = useState({});
 
     const callAPI = (bin) => {
-        axios.get(`34.70.30.55:8080/card-scheme/verify/${bin}`)
+        axios.get(`http://34.70.30.55:8080/card-scheme/verify/${bin}`)
             .then((response) => {
                 let data = response.data;
                 setResponse(data)
